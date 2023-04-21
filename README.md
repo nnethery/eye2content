@@ -2,6 +2,8 @@
 
 This project aims to build a classifier that identifies the type of content a user is consuming on their phone by tracking their eye movements. I use Apple's ARKit framework to track the user's eye movements and save the collected data. I then analyze the data to identify patterns corresponding to different types of content consumption.
 
+> :warning: **Attention!** :warning: Neural net code coming soon! :point_right: :exclamation:
+
 ## Overview
 
 I have built an iOS app using Swift that does the following:
