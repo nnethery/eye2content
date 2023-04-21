@@ -27,7 +27,7 @@ To save eye movement data, I collect eye position data at the frame rate provide
 
 ### Exporting Data as CSV
 
-I export the collected eye movement data as a CSV file by reading records from the `EyeData` entity, creating a `TabularData` object, and converting it to CSV format. Once the CSV file is prepared, I present a `UIActivityViewController` allowing the user to share the file via AirDrop or other sharing methods.
+I export the collected eye movement data as a CSV file by reading records from the `EyeData` entity and converting it to CSV format. Once the CSV file is prepared, I present a `UIActivityViewController` allowing the user to share the file via AirDrop or other sharing methods.
 
 ### User Interface
 
@@ -37,7 +37,7 @@ The user interface is built using UIKit and contains the following components:
 - A row of buttons at the bottom of the screen that includes:
   - A button to toggle the ARSession (start/stop eye tracking)
   - A button to export the collected data as a CSV file
-  - A drop-down menu for additional options
+  - A drop-down menu for selecting which content to load in the web browser
 
 While the app is running, a loading spinner is displayed when the CSV file is being prepared for export. This is achieved using a `UIActivityIndicatorView`.
 
