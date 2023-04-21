@@ -1,4 +1,4 @@
-# Eye Movement Classifier for Content Consumption
+# Eye Movement Classifier for Content Identification
 
 This project aims to build a classifier that identifies the type of content a user is consuming on their phone by tracking their eye movements. I use Apple's ARKit framework to track the user's eye movements and save the collected data. I then analyze the data to identify patterns corresponding to different types of content consumption.
 
