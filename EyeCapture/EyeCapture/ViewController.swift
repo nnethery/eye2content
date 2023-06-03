@@ -18,6 +18,7 @@ class ViewController: UIViewController, ARSessionDelegate {
     var isSessionRunning: Bool = false
     var content: [String] = []
     var contentType: String = ""
+    var toggleARSessionButton: UIButton!
     
     private var eyeDataBatch: [EyeData] = []
     private let batchSize = 300
@@ -38,8 +39,8 @@ class ViewController: UIViewController, ARSessionDelegate {
         view.addSubview(webView)
         
         // Create toggle ARSession button
-        let toggleARSessionButton = UIButton(type: .system)
-        toggleARSessionButton.setTitle("Toggle ARSession", for: .normal)
+        toggleARSessionButton = UIButton(type: .system)
+        toggleARSessionButton.setTitle("Start Tracking", for: .normal)
         toggleARSessionButton.addTarget(self, action: #selector(toggleSession), for: .touchUpInside)
         toggleARSessionButton.backgroundColor = .blue
         toggleARSessionButton.setTitleColor(.white, for: .normal)
@@ -168,10 +169,12 @@ class ViewController: UIViewController, ARSessionDelegate {
         if isSessionRunning {
             session.pause()
             isSessionRunning = false
+            toggleARSessionButton.setTitle("Start Tracking", for: .normal)
         } else {
             let configuration = ARFaceTrackingConfiguration()
             session.run(configuration, options: [])
             isSessionRunning = true
+            toggleARSessionButton.setTitle("Stop Tracking", for: .normal)
         }
     }
     
