@@ -51,6 +51,6 @@ While the app is running, a loading spinner is displayed when the CSV file is be
 
 ## Requirements
 
-- iOS 13.0 or later
+- iOS 14.7 or later
 - Xcode 12.0 or later
 - A device that supports ARKit face tracking (iPhone X or later)
